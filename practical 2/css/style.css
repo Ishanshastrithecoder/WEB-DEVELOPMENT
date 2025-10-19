@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 10px;
+    background: linear-gradient( #ffffff, white, #5e86b6, rgb(14, 6, 14));
+    min-height: 100vh;
+    color: #fff;
+}
+
+header,
+nav,
+main,
+footer {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+header {
+    background: #f9fafddc;
+    color: rgb(36, 6, 42);
+    text-align: center;
+}
+
+header img {
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: rotate(360deg);
+}
+
+h1 {
+    font-size: 24px;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.box {
+    color: #26022c;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    background-color: rgb(247, 241, 241);
+    padding: 30px;
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+nav a {
+    margin: 0 10px;
+    color: rgb(12, 1, 14);
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: rgb(29, 2, 37);
+    color: #f7f3f6;
+    transform: scale(1.05);
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+.flex-container {
+    display: flex;
+    gap: 100px;
+    flex-wrap: nowrap;
+}
+
+.flex-container .box {
+    flex: 1;
+    min-width: 400px;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 50px;
+    font-size: larger;
+    font-weight: 700;
+    text-align: center;
+}
+
+.grid-form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+    height: 600px;
+    max-width: 600px;
+    padding: 20px;
+    margin: auto;
+    color: #26022c;
+    border: 5px solid #26022c;
+    border-radius: 30px;
+}
+
+.grid-form input,
+.grid-form button {
+    padding: 8px;
+    font-size: 1em;
+    border-radius: 10px;
+}
+
+.grid-form .full-width {
+    grid-column: span 2;
+    background-color: #26022c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.grid-form .full-width:hover {
+    background-color: #084298;
+}
+
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    .grid-form {
+        grid-template-columns: 1fr;
+    }
+    .grid-form .full-width {
+        grid-column: span 1;
+    }
+    .add {
+        flex-direction: column;
+    }
+    footer {
+        width: auto;
+    }
+    .about-charusat img {
+        flex-wrap: wrap;
+    }
+}
+
+.hero {
+    text-align: left;
+    padding: 40px 20px;
+    background-image: url("https://charusat.online/images/4-home/banner-bg.webp");
+    background-repeat: no-repeat;
+    border-radius: 100px;
+    margin: 20px 0;
+    width: 1900px;
+    height: 500px;
+    color: #fcf9f8;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background: #ffffff;
+    color: #0072ff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #0d6efd;
+    color: white;
+}
+
+.about-charusat {
+    display: block;
+    background: linear-gradient(80deg, rgb(77, 76, 76), navy);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 900px;
+    color: #ffffff;
+}
+
+s .about-charusat h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.add {
+    background-color: #26022c;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    gap: 100px;
+    text-align: center;
+    flex-grow: 2;
+    padding: 100px;
+    width: 1900px;
+}
+
+footer .add {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+footer .add div {
+    margin: 10px;
+    flex: 1 1 200px;
+}
+
+footer a {
+    color: white;
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    transform: translateX(5px);
+}
+
+footer input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    20% {
+        transform: scale(1.1);
+    }
+    40% {
+        transform: scale(0.9);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+    80% {
+        transform: scale(0.97);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.b1 a,
+.b2 a,
+.b3 a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+    gap: 10px;
+    padding: 10px;
+    font-size: larger;
+}
+
+.b4 input {
+    height: 200px;
+    width: 500px;
+    padding: 0;
+    text-align: center;
+}
+
+.carousel {
+    margin: 40px 0;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    width: 100%;
+    animation: slideImages 25s infinite linear;
+}
+
+.carousel img {
+    width: 100vw;
+    max-width: 1500px;
+    height: 900px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+@keyframes slideImages {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-500%);
+    }
+}
