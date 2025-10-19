@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Student Portal</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #2f80ed, #56ccf2);
+            color: white;
+            scroll-behavior: smooth;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background-color: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: fadeInDown 1s ease-in-out;
+        }
+        
+        header img {
+            border-radius: 50%;
+            height: 80px;
+            transition: transform 0.3s ease;
+        }
+        
+        header img:hover {
+            transform: rotate(360deg);
+        }
+        
+        nav a {
+            margin-left: 20px;
+            color: white;
+            text-decoration: none;
+            position: relative;
+        }
+        
+        nav a::after {
+            content: '';
+            width: 0;
+            height: 2px;
+            background: white;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            transition: 0.3s;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        main {
+            padding: 60px 10%;
+            text-align: center;
+        }
+        
+        main h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            animation: slideInLeft 1s ease-in-out;
+        }
+        
+        main p {
+            font-size: 18px;
+            margin: 10px auto 20px;
+            max-width: 800px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        
+        .why-section {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .why-box {
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 15px;
+            width: 250px;
+            animation: zoomIn 1s ease-in-out;
+        }
+        
+        .carousel {
+            margin: 40px 0;
+            max-width: 100%;
+            overflow: hidden;
+        }
+        
+        .carousel-track {
+            display: flex;
+            width: 100%;
+            animation: slideImages 25s infinite linear;
+        }
+        
+        .carousel img {
+            width: 100vw;
+            max-width: 1920px;
+            height: auto;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        
+        footer {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 30px 10%;
+            text-align: center;
+        }
+        
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeInDown {
+            0% {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideImages {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-500%);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .why-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://yt3.googleusercontent.com/ytc/AIdro_niMkrCzfBClQtbjlFvcU3ds2zTPmd2CAaaKmYIBGNEt7M=s900-c-k-c0x00ffffff-no-rj" alt="logo" />
+        <h1>About Us</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+
+    <main class="about-charusat">
+        <section>
+            <h2>About CHARUSAT</h2>
+            <p>Charotar University of Science and Technology (CHARUSAT), situated in Changa, Gujarat, is a leading university known for its academic excellence and innovative learning environment. It has earned an 'A+' grade accreditation from NAAC and is
+                recognized by the University Grants Commission (UGC).</p>
+            <p>With over 8 constituent institutes offering programs in Engineering, Management, Pharmacy, Computer Science, Applied Sciences, Nursing, and Physiotherapy, CHARUSAT is dedicated to nurturing talent and building future leaders.
+            </p>
+        </section>
+
+        <div class="carousel">
+            <div class="carousel-track">
+                <img src="https://charusat.ac.in/files/slider/slide1.jpg" alt="CHARUSAT 1" />
+                <img src="https://charusat.ac.in/files/slider/slide2.jpg" alt="CHARUSAT 2" />
+                <img src="https://charusat.ac.in/files/slider/slide3.jpg" alt="CHARUSAT 3" />
+                <img src="https://charusat.ac.in/files/slider/slide4.jpg" alt="CHARUSAT 4" />
+                <img src="https://charusat.ac.in/files/slider/slide5.jpg" alt="CHARUSAT 5" />
+            </div>
+        </div>
+
+        <section class="why-section">
+            <div class="why-box" data-aos="zoom-in">
+                <h3>NAAC A+ Accredited</h3>
+                <p>Recognized for excellence in academics and research by national boards.</p>
+            </div>
+            <div class="why-box" data-aos="zoom-in">
+                <h3>Modern Campus</h3>
+                <p>State-of-the-art infrastructure, labs, and libraries for all departments.</p>
+            </div>
+            <div class="why-box" data-aos="zoom-in">
+                <h3>Experienced Faculty</h3>
+                <p>Highly qualified and research-oriented professors guiding future leaders.</p>
+            </div>
+            <div class="why-box" data-aos="zoom-in">
+                <h3>Global Collaborations</h3>
+                <p>MOUs with global universities and industry giants to boost career paths.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Student Portal. All rights reserved.
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
