@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main {
+        display: grid;
+        border: 1px solid;
+        grid-column: repeat(7, 7fr);
+        background: linear-gradient(40deg, black, white, black, white, black, white, black);
+    }
+    
+    .a {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        height: 500px;
+        background: radial-gradient(farthest-corner at 40px 40px, #f35 0%, #43e 100%);
+    }
+    
+    .b {
+        grid-column-start: 7;
+        grid-column-end: 6;
+        width: 250px;
+        height: 500px;
+        background-color: rgb(3, 255, 221);
+    }
+    
+    .C {
+        grid-column-start: 4;
+        grid-column-end: 8;
+        height: 300px;
+        background: linear-gradient(65deg, blue, white, green);
+    }
+</style>
+
+<body>
+    <div class="main">
+
+        <div class="a">1</div>
+        <div class="b">2</div>
+        <div class="C">3</div>
+        <div class="d">4</div>
+        <div class="e">5</div>
+        <div class="f">6</div>
+        <div class="g">7</div>
+
+    </div>
+</body>
+
+</html>
