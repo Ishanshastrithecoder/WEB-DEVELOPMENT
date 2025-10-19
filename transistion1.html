@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            body {
+            background-color: rgb(15, 19, 19);
+        }
+        
+        div {
+            background: radial-gradient(white, rgb(255, 255, 255), rgb(14, 169, 225), rgb(0, 255, 238), rgb(2, 221, 241), rgb(14, 229, 240), rgb(5, 252, 235), rgb(241, 238, 238), white, rgb(4, 178, 247));
+            height: 1000px;
+            width: 600px;
+            text-align: center;
+            border: rgb(247, 247, 247) 5px solid;
+            border-radius: 35%;
+        }
+        
+        div {
+            animation-iteration-count: infinite;
+            animation-duration: 2000;
+            animation-name: rotate;
+            animation-duration: 0.01s;
+        }
+        
+        @keyframes rotate {
+            0% {
+                transform: rotate(0);
+            }
+            /* 25% {
+                transform: rotate(90degS)translate(50px);
+            }
+            50% {
+                transform: rotate(180deg)translateX(100px);
+            }
+            75% {
+                transform: rotate(270deg)translateX(150px);
+            }*/
+            100% {
+                transform: rotate(360deg);
+            }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div></div>
+    </center>
+</body>
+
+</html>
