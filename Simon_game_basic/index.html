@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simon Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+<body>
+
+<h1 id="level-title">Press Any Key to Start</h1>
+
+<div class="container">
+  <div class="row">
+    <div id="green" class="btn green"></div>
+    <div id="red" class="btn red"></div>
+  </div>
+  <div class="row">
+    <div id="yellow" class="btn yellow"></div>
+    <div id="blue" class="btn blue"></div>
+  </div>
+</div>
+
+<audio id="red-sound" src="sounds/red.mp3"></audio>
+<audio id="green-sound" src="sounds/green.mp3"></audio>
+<audio id="yellow-sound" src="sounds/yellow.mp3"></audio>
+<audio id="blue-sound" src="sounds/blue.mp3"></audio>
+<audio id="wrong-sound" src="sounds/wrong.mp3"></audio>
+
+<script src="game.js"></script>
+</body>
+</html>
