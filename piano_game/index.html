@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Synth Piano (39 Keys)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <h1>Indian Studio Piano</h1>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label>Instrument</label>
+                <select id="instrumentSelect">
+                    <option value="piano">Standard Piano</option>
+                    <option value="harmonium">Harmonium</option>
+                    <option value="sitar">Sitar</option>
+                    <option value="sarod">Sarod</option>
+                    <option value="sarangi">Sarangi</option>
+                    <option value="santur">Santur</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label>Volume</label>
+                <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+            </div>
+        </div>
+
+        <div class="piano-scroll-wrapper">
+            <div class="piano" id="piano"></div>
+        </div>
+        
+        <p class="instruction">Scroll horizontally to reach higher/lower octaves!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
